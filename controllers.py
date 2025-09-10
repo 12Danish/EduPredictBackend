@@ -7,9 +7,20 @@ def handle_student_file_processing_controller():
     file = request.files['file']
 
     try:
-        student_file_processing_service(file)
+        output = student_file_processing_service(file)
 
-        return jsonify({"message" : "Received request successfully"}),200
+        return jsonify(output), 200
+
+
+    except ValueError as ve:
+
+        # validation error -> 400 Bad Request
+
+        return jsonify({'error': str(ve)}), 400
+
 
     except Exception as e:
-        return jsonify({'error': str(e)}), 404
+
+        # any other server-side error -> 500 Internal Server Error
+
+        return jsonify({'error': str(e)}), 500

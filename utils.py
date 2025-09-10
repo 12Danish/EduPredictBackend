@@ -50,6 +50,8 @@ def check_and_normalize_values(df):
 
     normalize_values(df)
 
+    return df
+
 def normalize_values(df):
     for col in ["Previous qualification (grade)", "Admission grade"]:
         df[col] = df[col] * 200
