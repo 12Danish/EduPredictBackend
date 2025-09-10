@@ -69,7 +69,6 @@ def generate_suggestions_for_cohort(df):
     Focus on instructor guidance and institutional policies.
     """
 
-    response_text = ""
 
     try:
         response = client.models.generate_content(
