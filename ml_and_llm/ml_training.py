@@ -189,4 +189,4 @@ model_artifacts = {
     }
 }
 # Save the complete model package
-joblib.dump(model_artifacts, 'student_dropout_model_top10.pkl')
+joblib.dump(model_artifacts, 'student_dropout_model_top8.pkl')
