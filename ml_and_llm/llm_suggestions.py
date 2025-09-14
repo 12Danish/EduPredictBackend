@@ -67,6 +67,8 @@ def generate_suggestions_for_cohort(df):
 
     Format your response in markdown with bullet points. Be practical and specific. 
     Focus on instructor guidance and institutional policies.
+    
+    Directly start with the response and do not write any acknowledgements.
     """
 
 
